@@ -3,7 +3,7 @@
 const SudokuSolver = require("../controllers/sudoku-solver.js");
 const rowCol = (coord) => {
   if (typeof coord !== "string" || coord.length !== 2) return [false, false];
-  const row = coord[0].charCodeAt(0) - "a".charCodeAt(0);
+  const row = coord[0].toLocaleLowerCase().charCodeAt(0) - "a".charCodeAt(0);
   const col = Number(coord[1]) - 1;
   return [row, col];
 };
