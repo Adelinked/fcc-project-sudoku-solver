@@ -32,8 +32,8 @@ module.exports = function (app) {
       typeof col !== "number" ||
       col < 0 ||
       row < 0 ||
-      col > 9 ||
-      row > 9
+      col > 8 ||
+      row > 8
     ) {
       res.json({ error: "Invalid coordinate" });
     }
